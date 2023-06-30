@@ -1,0 +1,57 @@
+{
+  "title": "Animated text demo",
+  "gltfUrl": "codemart.glb",
+  "environment": "evening",
+
+  "content": [
+    {
+      "title": "Look at this",
+      "camera": "Camera_animated_baked",
+      "animations": [
+        "text-CAction",
+        "text-OAction",
+        "text-DAction",
+        "text-EAction",
+        "text-MAction",
+        "text-AAction",
+        "text-RAction",
+        "text-TAction"
+      ],
+      "html": "<p> From this angle you can marvel at the minimalistic but playful quality of this most useful of demos.  <img src=\"render-animated-backed.png\"> </p> <p> and it mooooves! </p>",
+      "sprite": "spriteS2.png",
+      "audio": "cam.mp3"
+    },
+    {
+      "title": "Top view",
+      "camera": "Camera_top",
+      "animations": [
+        "text-CAction",
+        "text-OAction",
+        "text-DAction",
+        "text-EAction",
+        "text-MAction",
+        "text-AAction",
+        "text-RAction",
+        "text-TAction"
+      ],
+      "html": "<p> The top view gives another perspective on the elaborate and clever animation employed here by the author.  <img src=\"render-top.png\"> </p> <p> The bla bla is viscerally bla and bla la lu lei. <b> Guliver and Gorgonzola</b>  </p>",
+      "overlayHtml": "<img src=\"overlay.png\" draggable=\"false\">",
+      "sprite": "spriteS3.png",
+      "audio": "top.mp3"
+    },
+    {
+      "title": "Look from the front",
+      "camera": "Camera_front",
+      "animations": [],
+      "html": "<p> Front view and not moving. But hey look at the floor. Looks all technical and scary! </p> <img src=\"render-front.png\"> ",
+      "materialVariant": "uv",
+      "sprite": "spriteS1.png",
+      "audio": "front.mp3"
+    }
+  ], 
+
+  "chapters": [
+    {"id":"ch1", "title": "chapter 1", "cameras":["Camera_front", "Camera_animated_baked"]},
+    {"id":"ch2", "title": "chapter 2", "cameras":["Camera_front", "Camera_top"]}
+  ]
+}

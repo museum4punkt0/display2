@@ -1,0 +1,97 @@
+/* 
+IMPORTANT NOTE : resize cascades.
+
+We need to give an **EXTERNAL** height to Viewport !
+height: 100% will *not work* unless the parent of the component has a size!
+
+This is unusual but 3d canvas needs to have a fixed size. It computes it every frame from
+the css size. So the css size should NOT depend on the canvas size!
+
+If parent tries to compute it's height based on content we're in trouble.
+The canvas will set it's size property to it's current css size.
+Then the parent recomputes it's size based on the content canvas and we get a 
+resize loop.
+
+When changing this css also take care to keep the overlay images aligned with 
+points of interest in the 3d scene.
+*/
+.ViewerRoot{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-wrap: wrap;
+}
+
+.ViewerRoot .View3d {
+    height: inherit;
+}
+
+.Viewport{
+    position: relative;
+    flex: 8 4 200px;
+    width: 100%;
+    height: 80vh;
+}
+
+.Viewport progress{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+
+.Viewport .View3dOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/** Aim to keep the center of this image on the center of the 3d scene.
+    As things resize we want some feature on the image to keep being aligned to the
+    3d features underneath.
+    Make it fit via max-widths. Don't stretch it 
+*/
+.Viewport .Overlay img,video{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/** If we don't position this too then the auto margins from above will allow mouse
+events to the canvas. So the only role for this is to cover the whole canvas
+and optionally to have a background color
+*/
+.Viewport .Overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(255 255 255 / 10%);
+    z-index: 2;
+}
+
+.Viewport .CloseOverlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 60px;
+    background: transparent;
+    color: white;
+    text-shadow: 4px 3px 3px rgba(0,0,0,0.6);
+    border: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.Viewport .CloseOverlay:hover{
+    background: rgb(157 157 157 / 15%);
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+}

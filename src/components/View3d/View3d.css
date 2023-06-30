@@ -1,0 +1,16 @@
+.View3d {
+    width: 100%;
+    height: 100%;
+}
+
+.View3d canvas {
+    /* careful here. don't make canvas.clientwidth != canvas.width else you trigger resize cascades 
+     * In other words the width you set here should NOT depend on content size
+     * as the content will grow to the size you set dynamically.
+     */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

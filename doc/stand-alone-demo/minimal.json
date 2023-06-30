@@ -1,0 +1,24 @@
+{
+  "title": "Story title",
+  "content": [
+    {
+      "title": "Title for camera LookingAtPotato",
+      "html": "<p> some fancy description html </p>",
+      "camera": "LookingAtPotato",
+      "materialVariant": "pick a material variant or delete this line. Available variants: ",
+      "animations": [],
+      "overlayHtml": "<p> some html to be shown on top of the 3d scene. Or delete this line </p>",
+      "sprite": "url to a sprite texture or delete this line"
+    }
+  ],
+  "gltfUrl": "minimal.glb",
+  "chapters": [
+    {
+      "id": "chapter",
+      "title": "chap",
+      "cameras": [
+        "LookingAtPotato"
+      ]
+    }
+  ]
+}

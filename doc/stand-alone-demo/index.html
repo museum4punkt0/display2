@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="importmap">
+    {
+      "imports": {
+        "@smb/display": "./node_modules/@smb/display/dist/esm/smbDisplay.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as d from '@smb/display';
+    console.log(d.VERSION);
+    d.createScene(document.getElementById('root'), 'minimal.json');
+  </script>
+
+  </head>
+  <body>
+    <h1>Stand alone.</h1>
+    <p> No typescript. No rollup or other tooling. No react. Uses the full bundle smbDisplay.js</p>
+    <p>Usage 
+      <pre> 
+        $ npm install . 
+        $ npm run serve
+      </pre>
+    </p>
+    <div id="root"></div>
+  </body>
+
+</html>

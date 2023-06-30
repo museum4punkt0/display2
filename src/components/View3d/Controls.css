@@ -1,0 +1,66 @@
+.Controls {
+    text-shadow: 4px 3px 3px rgba(0,0,0,0.6);
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+} 
+
+.Controls.mainControls {
+    font-size: 40px;
+    position: absolute;
+    bottom: 4px;
+    right: 12px;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.Controls.extraControls {
+    position: absolute;
+    bottom: 4px;
+    width: 90%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Controls button {
+    cursor: pointer;
+    background: transparent;
+    text-shadow: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: 0;
+}
+
+.Controls button:hover {
+    background: rgb(157 157 157 / 15%);
+    text-shadow: inherit;
+    font-size: inherit;
+    border: 0;
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+}
+
+.Controls select {
+    max-width: 5em;
+    background: transparent;
+    text-shadow: inherit;
+    color: inherit;
+    border: 0;
+}
+
+.Controls select:hover {
+    background: rgb(157 157 157 / 15%);
+    text-shadow: inherit;
+    border: 0;
+    transform: scale(1.1);
+    transition: transform .2s ease-in-out;
+}   
+
+.Controls input[type=range] {
+    width: 80px;
+    text-shadow: inherit;
+    font-size: inherit;
+    color: inherit;
+}

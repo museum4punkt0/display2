@@ -1,0 +1,64 @@
+{
+  "title": "Story title",
+  "content": [
+    {
+      "title": "Title for camera Camera_animated_baked",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camera_animated_baked"
+    },
+    {
+      "title": "Title for camera Camera_front",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camera_front",
+      "animations": [
+        "text-CAction",
+        "text-OAction",
+        "text-DAction",
+        "text-EAction",
+        "text-MAction",
+        "text-AAction",
+        "text-RAction",
+        "text-TAction"
+      ]
+    },
+    {
+      "title": "Title for camera Camera_top",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camera_top",
+      "animations": [
+        "text-CAction",
+        "text-OAction",
+        "text-DAction",
+        "text-EAction",
+        "text-MAction",
+        "text-AAction",
+        "text-RAction",
+        "text-TAction"
+      ]
+    },
+    {
+      "title": "Title for camera Camerabehindlamp",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camerabehindlamp",
+      "animations": [
+        "ArmatureAction"
+      ]
+    },
+    {
+      "title": "Title for camera Camera_far",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camera_far"
+    },
+    {
+      "title": "Title for camera Camera",
+      "html": "<p> some fancy description html </p>",
+      "camera": "Camera"
+    }
+  ],
+  "chapters": [
+    {"id":"ch1", "title": "chapter 1", "cameras":["Camera_front", "Camera_animated_baked"]},
+    {"id":"ch2", "title": "chapter 2", "cameras":["Camera_front", "Camera_top", "Camera"]},
+    {"id":"ch3", "title": "chapter z", "cameras":["Camerabehindlamp", "Camera_far"]}
+  ],
+  "gltfUrl": "codemart3.glb"
+}

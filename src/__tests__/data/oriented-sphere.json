@@ -1,0 +1,67 @@
+{
+  "title": "Oriented sphere camera motion test bed",
+  "gltfUrl": "oriented-sphere.glb",
+  "environment": "evening",
+  "chapters": [
+    {
+      "id":"ch1", 
+      "title": "chapter 1", 
+      "cameras":[
+        "cam-interior", "cam-interior2", "cam-non-normal", "cam-sphx", 
+        "cam-sphx-", "cam-sphy", "cam-sphy-tilted", "cam-sphymid", "cam-sphz", "cam-sphz-"
+      ]
+    }
+  ],
+  "content": [
+    {
+      "title": "cam-interior",
+      "camera": "cam-interior",
+      "html": "<p> cam-interior </p>"
+    },
+    {
+      "title": "cam-interior2",
+      "camera": "cam-interior2",
+      "html": "<p> cam-interior2</p>"
+    },
+    {
+      "title": "cam-non-normal",
+      "camera": "cam-non-normal",
+      "html": "<p> cam-non-normal </p>"
+    },
+    {
+      "title": "cam-sphx",
+      "camera": "cam-sphx",
+      "html": "<p> cam-sphx</p>"
+    },
+    {
+      "title": "cam-sphx-",
+      "camera": "cam-sphx-",
+      "html": "<p> cam-sphx- </p>"
+    },
+    {
+      "title": "cam-sphy",
+      "camera": "cam-sphy",
+      "html": "<p> cam-sphy</p>"
+    },
+    {
+      "title": "cam-sphy-tilted",
+      "camera": "cam-sphy-tilted",
+      "html": "<p> cam-sphy-tilted</p>"
+    },
+    {
+      "title": "cam-sphymid",
+      "camera": "cam-sphymid",
+      "html": "<p> cam-sphymid</p>"
+    },
+    {
+      "title": "cam-sphz",
+      "camera": "cam-sphz",
+      "html": "<p> cam-sphz</p>"
+    },
+    {
+      "title": "cam-sphz-",
+      "camera": "cam-sphz-",
+      "html": "<p> cam-sphz-</p>"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "No model loaded",
+  "gltfUrl": "minimal.glb",
+  "environment": "",
+
+  "content": [
+    {
+      "title": "No model loaded",
+      "camera": "LookingAtPotato",
+      "html": "<p> default model </p>"
+    }
+  ],
+
+  "chapters": [
+    {"id":"ch1", "title": "chapter 1", "cameras":["LookingAtPotato"]}
+  ]
+}

@@ -1,0 +1,83 @@
+.View3dContent{
+    flex: 4 1 150px;
+    box-sizing: border-box;
+    background-color: rgb(245 245 245);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.View3dContent .chaptersNav{
+    flex: 0 1;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    background-color: #ccc;
+}
+
+.View3dContent .chaptersNav button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.View3dContent .chaptersNav button.active {
+    color: blue;
+}
+
+.View3dContent .header{
+    flex: 0 1;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.View3dContent .header button{
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.View3dContent .storyTitle{
+    flex: 1 1;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.View3dContent article{
+    flex: 1 1;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
+.View3dContent img{
+    max-width: 80%;
+}
+
+.View3dContent .title{
+    font-size: 1.4em;
+    border-bottom: 1px solid black;
+}
+
+.View3dContent .title button{
+    /* background: rgb(157 157 157 / 15%); */
+    text-shadow: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: 0;
+    margin-left: 1em;
+    /* cursor: pointer; */
+    cursor:zoom-in;
+}
+
+.View3dContent .title .hasOverlay{
+    color:  rgb(255, 0, 70);
+}
+
+.View3dContent .title button:hover{
+    background: rgb(157 157 157 / 95%);
+    text-shadow: inherit;
+    font-size: inherit;
+    border: 0;
+}

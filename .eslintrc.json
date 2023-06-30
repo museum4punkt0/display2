@@ -1,0 +1,68 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "curly": [2, "multi-line"],
+    "quotes": [2, "single", "avoid-escape"],
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 1,
+    "jsx-quotes": [1, "prefer-single"],
+    "react/jsx-no-undef": 1,
+    "react/jsx-no-bind": 0,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-unknown-property": 1,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 1,
+    "react/self-closing-comp": 1,
+    "semi": [2, "always"],
+    "strict": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": 2,
+    // overrides and customisations of individual rules
+    // ------------------------------------------------
+    // to allow for void not_awaited_async() pattern to mark intentionally non-awaited promises
+    "no-void": [1, { "allowAsStatement": true }],
+    // allow for unused args to be kept if prefixed with _ . This documents what args are there. 
+    "@typescript-eslint/no-unused-vars": [ 1, { 
+      "argsIgnorePattern": "^_", 
+      "destructuredArrayIgnorePattern": "^_"
+    } ],
+    // empty functions should not be errors just warnings
+    // also empty methods are unlikely to be an error but there to satisfy an interface
+    "@typescript-eslint/no-empty-function":[1, {"allow": ["methods"] }],
+    "@typescript-eslint/naming-convention": ["warn", 
+        // we use object literals as maps from strings
+        // allow stuff like rating = {'beans and eggs': 4}
+        {"selector":["objectLiteralProperty"], "format":null }
+    ]
+  }, 
+  
+  "root": true
+}
